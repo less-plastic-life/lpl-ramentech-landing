@@ -142,6 +142,7 @@ html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
   padding: 0 18px; text-align: center; font-size: 24px; font-weight: 800; letter-spacing: -.01em;
 }
 .back { transform: rotateY(180deg); display: flex; flex-direction: column; gap: 14px; padding: 18px; overflow-y: auto; }
+.back > * { flex-shrink: 0; }
 
 .chip {
   align-self: flex-start; background: var(--slate); color: #fff;
@@ -168,6 +169,11 @@ html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
 .bar .r { color: var(--ink); text-align: right; }
 .bar small { display: block; font-size: 11px; font-weight: 700; opacity: .9; }
 
+.uses { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.uses figure { margin: 0; }
+.uses img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 10px; background: #d9d3c4; }
+.uses figcaption { margin-top: 4px; font-size: 10.5px; line-height: 1.25; text-align: center; color: var(--muted); font-weight: 700; }
+
 .cta {
   margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center;
   background: var(--slate); color: #fff; text-decoration: none;
@@ -175,6 +181,8 @@ html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
   padding: 15px 16px; border-radius: 14px; min-height: 52px;
 }
 .cta:active { transform: scale(.98); }
+/* 내용이 길어서 스크롤되더라도 설문 버튼은 항상 보이게 */
+.back .cta { position: sticky; bottom: 0; box-shadow: 0 -12px 12px -4px var(--cream); }
 .cta .arrow { font-size: 18px; }
 
 .pager { position: relative; z-index: 2; display: flex; align-items: center; gap: 14px; }
@@ -194,6 +202,17 @@ html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
 }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
+@media (max-height: 700px) {
+  .scene { height: min(calc(100svh - 128px), 620px); }
+  .back { gap: 9px; padding: 14px; }
+  .chip { font-size: 12px; padding: 5px 12px; }
+  .block { gap: 4px; }
+  .label { font-size: 10px; }
+  .bar { height: 46px; font-size: 14px; }
+  .uses img { aspect-ratio: 4 / 3; }
+  .uses figcaption { font-size: 10px; margin-top: 3px; }
+  .cta { font-size: 14px; padding: 11px 14px; min-height: 46px; }
+}
 @media (max-height: 640px) {
   .intro { font-size: 16px; }
   .block p { font-size: 13.5px; }

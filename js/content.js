@@ -27,6 +27,14 @@ window.LPL_CONFIG = {
     { id: "rice",    image: "assets/img/rice.jpg",    thumb: "assets/img/rice-thumb.jpg" },
     { id: "tapioca", image: "assets/img/tapioca.jpg", thumb: "assets/img/tapioca-thumb.jpg" },
     { id: "wheat",   image: "assets/img/wheat.jpg",   thumb: "assets/img/wheat-thumb.jpg" }
+  ],
+
+  // 뒷면의 "쓰일 수 있는 곳" 사진 줄 (모든 카드에 공통으로 나와요)
+  useCases: [
+    { id: "cafe",     image: "assets/img/bg-cafe.jpg",     pos: "40% 50%" },
+    { id: "lunch",    image: "assets/img/bg-lunch.jpg",    pos: "52% 55%" },
+    { id: "cosmetic", image: "assets/img/bg-cosmetic.jpg", pos: "38% 50%" },
+    { id: "crate",    image: "assets/img/bg-crate.jpg",    pos: "62% 55%" }
   ]
 };
 
@@ -46,6 +54,8 @@ window.LPL_TEXT = {
       reduceLine: "Petroleum-based plastic use is reduced.",
       adjustLine: "The ratio can be adjusted.",
       cta: "Same conditions — would you choose the eco-friendly one? Take the survey",
+      useLabel: "Where our bioplastic can be used",
+      uses: { cafe: "Café cups", lunch: "Food trays", cosmetic: "Cosmetic jars", crate: "Bottle crates" },
       ctaSoon: "Survey link coming soon",
       event: "RAMEN TECH 2026"
     },
@@ -83,6 +93,8 @@ window.LPL_TEXT = {
       reduceLine: "石油由来プラスチックの使用を減らします。",
       adjustLine: "配合比率は調整できます。",
       cta: "同じ条件なら、環境に配慮した製品を選びますか？アンケートに回答する",
+      useLabel: "バイオプラスチックを活用できる場面",
+      uses: { cafe: "カップ", lunch: "食品トレー", cosmetic: "化粧品容器", crate: "ボトルケース" },
       ctaSoon: "アンケートは準備中です",
       event: "RAMEN TECH 2026"
     },
@@ -96,7 +108,7 @@ window.LPL_TEXT = {
       rice:    { name: "もみ殻", inline: "もみ殻",
                  intro: "米粒を包んでいたもみ殻。",
                  origin: "ご飯になるお米。精米のあとに残るもみ殻は、副産物でした。" },
-      tapioca: { name: "タピオカ", inline: "タピオカ（キャッサバ由来デンプン）",
+      tapioca: { name: "タピオカ", inline: "タピオカ",
                  intro: "キャッサバの根から得られるデンプン。",
                  origin: "ドリンクやスイーツに使われるタピオカ。規格に合わないキャッサバは捨てられていました。" },
       wheat:   { name: "小麦ふすま", inline: "小麦ふすま",
@@ -120,6 +132,8 @@ window.LPL_TEXT = {
       reduceLine: "有助于减少石油基塑料的用量。",
       adjustLine: "配比可以调整。",
       cta: "条件相同，您会选择环保产品吗？参与问卷",
+      useLabel: "生物塑料可应用的场景",
+      uses: { cafe: "咖啡杯", lunch: "餐盒", cosmetic: "化妆品容器", crate: "饮料箱" },
       ctaSoon: "问卷链接即将开放",
       event: "RAMEN TECH 2026"
     },
@@ -157,6 +171,8 @@ window.LPL_TEXT = {
       reduceLine: "석유계 플라스틱 사용을 줄입니다.",
       adjustLine: "함량은 조절할 수 있어요.",
       cta: "같은 조건이라면, 친환경 제품을 고르시겠어요? 설문 참여하기",
+      useLabel: "우리 바이오플라스틱이 쓰일 수 있는 곳",
+      uses: { cafe: "카페 컵", lunch: "식품 용기", cosmetic: "화장품 용기", crate: "음료 박스" },
       ctaSoon: "설문 링크 준비 중이에요",
       event: "RAMEN TECH 2026"
     },

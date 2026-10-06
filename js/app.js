@@ -117,6 +117,7 @@
       '<div class="block"><div class="label"></div>' +
         '<div class="bar" style="--p:' + p + '"><div class="l"></div><div class="r"></div></div>' +
         '<p class="nowline"></p><p class="sub reduce"></p></div>' +
+      '<div class="block"><div class="label uselabel"></div><div class="uses"></div></div>' +
       '<a class="cta" rel="noopener"><span class="txt"></span><span class="arrow" aria-hidden="true">&#8594;</span></a>';
     var q = function (sel) { return back.querySelector(sel); };
     q(".chip").textContent = t.name;
@@ -131,6 +132,16 @@
     q(".bar .r small").textContent = u.plasticLabel;
     q(".nowline").textContent = fmt(u.nowLine, { pct: p, name: t.inline });
     q(".reduce").textContent = u.reduceLine + " " + u.adjustLine;
+    q(".uselabel").textContent = u.useLabel;
+    var usesEl = q(".uses");
+    (CFG.useCases || []).forEach(function (c) {
+      var f = document.createElement("figure");
+      var im = document.createElement("img");
+      im.src = c.image; im.alt = ""; im.draggable = false; im.style.objectPosition = c.pos || "50% 50%";
+      var cap = document.createElement("figcaption");
+      cap.textContent = u.uses[c.id];
+      f.appendChild(im); f.appendChild(cap); usesEl.appendChild(f);
+    });
     var cta = q(".cta");
     q(".cta .txt").textContent = u.cta;
     if (href) { cta.href = href; cta.target = "_blank"; }
