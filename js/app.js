@@ -94,8 +94,10 @@
   function surveyHref(id) {
     var base = (CFG.surveyUrl && CFG.surveyUrl[lang]) || "";
     if (!base) return "";
-    return base + (base.indexOf("?") > -1 ? "&" : "?") + "src=booth&card=" + encodeURIComponent(id) + "&lang=" + lang;
+    return base + (base.indexOf("?") > -1 ? "&" : "?") + "src=booth&card=" + encodeURIComponent(id) +
+      "&lang=" + lang + "&viewed=" + Object.keys(seen).length;
   }
+  var seen = {}; /* 지금까지 열어본 카드 (설문 분석용) */
   var toastTimer;
   function showToast(msg) {
     toast.textContent = msg; toast.classList.add("show");
@@ -108,12 +110,13 @@
 
   function fillDetail() {
     var m = CFG.materials[idx], t = mat(idx), u = ui(), p = CFG.biomassPercent;
+    seen[m.id] = 1;
     frontImg.src = m.image; frontName.textContent = t.name;
     var href = surveyHref(m.id);
     back.innerHTML =
       '<div class="chip"></div>' +
       '<p class="intro"></p>' +
-      '<div class="block"><div class="label"></div><p class="origin"></p></div>' +
+      '<div class="block"><div class="label"></div><div class="chips"></div><p class="origin"></p></div>' +
       '<div class="block"><div class="label"></div>' +
         '<div class="bar" style="--p:' + p + '"><div class="l"></div><div class="r"></div></div>' +
         '<p class="nowline"></p><p class="sub reduce"></p></div>' +
@@ -124,7 +127,11 @@
     q(".intro").textContent = t.intro;
     q(".origin").textContent = t.origin;
     var labels = back.querySelectorAll(".label");
-    labels[0].textContent = u.originLabel;
+    labels[0].textContent = u.formsLabel;
+    var chipsEl = q(".chips");
+    (t.forms || []).forEach(function (f) {
+      var s = document.createElement("span"); s.textContent = f; chipsEl.appendChild(s);
+    });
     labels[1].textContent = u.nowLabel;
     q(".bar .l").innerHTML = p + "%<small></small>";
     q(".bar .l small").textContent = t.name;

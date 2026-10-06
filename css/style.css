@@ -169,6 +169,8 @@ html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
 .bar .r { color: var(--ink); text-align: right; }
 .bar small { display: block; font-size: 11px; font-weight: 700; opacity: .9; }
 
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips span { background: #e1d9c6; color: var(--ink); font-size: 13px; font-weight: 700; padding: 5px 11px; border-radius: 999px; }
 .uses { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
 .uses figure { margin: 0; }
 .uses img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 10px; background: #d9d3c4; }
@@ -208,6 +210,8 @@ html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
   .chip { font-size: 12px; padding: 5px 12px; }
   .block { gap: 4px; }
   .label { font-size: 10px; }
+  .chips { gap: 5px; }
+  .chips span { font-size: 12px; padding: 4px 9px; }
   .bar { height: 46px; font-size: 14px; }
   .uses img { aspect-ratio: 4 / 3; }
   .uses figcaption { font-size: 10px; margin-top: 3px; }
