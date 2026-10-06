@@ -14,10 +14,10 @@ window.LPL_CONFIG = {
   // 언어별 설문 링크. 주소를 넣으면 버튼이 연결돼요. (비어 있으면 "준비 중" 안내가 떠요)
   // 링크 뒤에 ?src=booth&card=원료&lang=언어&viewed=본카드수 가 자동으로 붙어요.
   surveyUrl: {
-    en: "",
-    ja: "",
-    zh: "",
-    ko: ""
+    en: "https://less-plastic-life.com/survey",
+    ja: "https://less-plastic-life.com/survey",
+    zh: "https://less-plastic-life.com/survey",
+    ko: "https://less-plastic-life.com/survey"
   },
 
   // "일상에서 만나는 모습" 타일에 사진을 쓸지 여부.
@@ -83,14 +83,14 @@ window.LPL_TEXT = {
                  forms: ["Café coffee", "Canned & bottled coffee", "Instant coffee"],
                  story: [
                    "Coffee is made by passing hot water through ground beans to draw out the flavor.",
-                   "What stays behind is a pile of wet, spent grounds. Cafés and coffee factories produce them every day, but there are few uses for them, so they often end up as trash.",
+                   "What stays behind is a pile of wet, spent grounds. Cafés and coffee factories produce them every day, but only 2.3% gets reused. Most of the rest ends up as trash.",
                    "We blend these grounds into our plastic. Waste becomes a raw material, and less petroleum plastic is needed."] },
       rice:    { name: "Rice Husk", inline: "rice husk",
                  intro: "The husk that wraps each grain of rice.",
                  forms: ["Steamed rice", "Rice cakes", "Rice crackers"],
                  story: [
                    "Each grain of rice grows wrapped in a hard outer shell, the husk.",
-                   "To get the rice we eat, the husk has to be stripped off during milling. People can't eat it, so it isn't sold with the rice and is left over as a by-product.",
+                   "To get the rice we eat, the husk has to be stripped off during milling. People can't eat it and it doesn't sell well, so it is left over as a by-product.",
                    "We blend this husk into our plastic. A leftover by-product becomes a raw material, and less petroleum plastic is needed."] },
       tapioca: { name: "Tapioca", inline: "tapioca starch",
                  intro: "Starch from cassava roots.",
@@ -104,7 +104,7 @@ window.LPL_TEXT = {
                  forms: ["Bread", "Ramen & noodles", "Beer"],
                  story: [
                    "To make smooth flour, wheat grains are milled and the tough outer layer is separated out.",
-                   "That outer layer is wheat bran. Flour is the main product, so the bran is left over as a by-product.",
+                   "That outer layer is wheat bran. Flour is the main product, and bran doesn't sell well, so it is left over as a by-product.",
                    "We blend this bran into our plastic. A leftover by-product becomes a raw material, and less petroleum plastic is needed."] }
     }
   },
@@ -143,14 +143,14 @@ window.LPL_TEXT = {
                  forms: ["カフェのコーヒー", "缶・ボトルコーヒー", "インスタント"],
                  story: [
                    "コーヒーは、挽いた豆にお湯を通して、味と香りを抽出して作ります。",
-                   "抽出したあとには、湿った豆のかすが残ります。これがコーヒーかすです。カフェやコーヒー工場で毎日出ますが、使い道が少なく、ごみとして捨てられることが多くあります。",
+                   "抽出したあとには、湿った豆のかすが残ります。これがコーヒーかすです。カフェやコーヒー工場で毎日出ますが、再利用されるのは2.3%だけ。残りの大半はごみとして捨てられています。",
                    "私たちはこのコーヒーかすをプラスチックの原料に混ぜます。ごみだったものが原料になり、石油系プラスチックはその分減ります。"] },
       rice:    { name: "もみ殻", inline: "もみ殻",
                  intro: "米粒を包んでいたもみ殻。",
                  forms: ["ごはん", "お餅", "せんべい"],
                  story: [
                    "米粒は、硬い殻に包まれて育ちます。この殻がもみ殻です。",
-                   "私たちが食べる米を得るには、精米の過程でこの殻を取り除く必要があります。もみ殻は食べられないため、米と一緒には売られず、副産物として残ります。",
+                   "私たちが食べる米を得るには、精米の過程でこの殻を取り除く必要があります。もみ殻は食べられず、あまり売れないため、副産物として残ります。",
                    "私たちはこのもみ殻をプラスチックの原料に混ぜます。余っていた副産物が原料になり、石油系プラスチックはその分減ります。"] },
       tapioca: { name: "タピオカ", inline: "タピオカ",
                  intro: "キャッサバの根から得られるデンプン。",
@@ -164,7 +164,7 @@ window.LPL_TEXT = {
                  forms: ["パン", "ラーメン・うどん", "ビール"],
                  story: [
                    "なめらかな小麦粉を作るには、小麦の粒を挽きながら、硬い外皮を取り分ける必要があります。",
-                   "このとき分けられた外皮がふすまです。主役は小麦粉なので、ふすまは副産物として残ります。",
+                   "このとき分けられた外皮がふすまです。主役は小麦粉で、ふすまはあまり売れないため、副産物として残ります。",
                    "私たちはこのふすまをプラスチックの原料に混ぜます。余っていた副産物が原料になり、石油系プラスチックはその分減ります。"] }
     }
   },
@@ -203,14 +203,14 @@ window.LPL_TEXT = {
                  forms: ["咖啡店咖啡", "罐装·瓶装咖啡", "速溶咖啡"],
                  story: [
                    "咖啡是用热水冲过咖啡粉，萃取出风味制成的。",
-                   "萃取之后会剩下湿润的咖啡渣。咖啡店和咖啡工厂每天都会产生，但能再利用的途径不多，常常被当作垃圾丢掉。",
+                   "萃取之后会剩下湿润的咖啡渣。咖啡店和咖啡工厂每天都会产生，但只有2.3%被再利用，其余大部分被当作垃圾丢掉。",
                    "我们把这些咖啡渣混入塑料原料。垃圾变成原料，石油基塑料也相应减少。"] },
       rice:    { name: "稻壳", inline: "稻壳",
                  intro: "包裹稻谷的外壳。",
                  forms: ["米饭", "年糕", "米果"],
                  story: [
                    "稻谷的每一粒米都包裹在坚硬的外壳里，这层外壳就是稻壳。",
-                   "要得到我们吃的大米，碾米时必须去掉这层外壳。稻壳不能食用，不会和大米一起出售，只能作为副产物留下。",
+                   "要得到我们吃的大米，碾米时必须去掉这层外壳。稻壳不能食用，也不太好卖，只能作为副产物留下。",
                    "我们把稻壳混入塑料原料。剩下的副产物变成原料，石油基塑料也相应减少。"] },
       tapioca: { name: "木薯淀粉", inline: "木薯淀粉",
                  intro: "从木薯根中提取的淀粉。",
@@ -224,7 +224,7 @@ window.LPL_TEXT = {
                  forms: ["面包", "拉面·面条", "啤酒"],
                  story: [
                    "要做出细腻的面粉，磨小麦时必须把坚硬的外皮分离出来。",
-                   "分离出的外皮就是麦麸。面粉才是主角，所以麦麸作为副产物留了下来。",
+                   "分离出的外皮就是麦麸。面粉才是主角，麦麸不太好卖，所以作为副产物留了下来。",
                    "我们把麦麸混入塑料原料。剩下的副产物变成原料，石油基塑料也相应减少。"] }
     }
   },
@@ -263,14 +263,14 @@ window.LPL_TEXT = {
                  forms: ["카페 커피", "캔·병 커피", "인스턴트 커피"],
                  story: [
                    "커피는 간 원두에 뜨거운 물을 통과시켜 맛과 향을 우려내 만들어요.",
-                   "우려내고 나면 젖은 원두 가루가 남는데, 이게 커피박이에요. 카페와 커피 공장에서 날마다 나오지만 다시 쓸 곳이 많지 않아 쓰레기로 버려지는 경우가 많아요.",
+                   "우려내고 나면 젖은 원두 가루가 남는데, 이게 커피박이에요. 카페와 커피 공장에서 날마다 나오지만 다시 쓰이는 건 2.3%뿐이고, 나머지 대부분은 쓰레기로 버려져요.",
                    "우리는 이 커피박을 플라스틱 원료에 섞어요. 쓰레기였던 것이 원료가 되고, 석유계 플라스틱은 그만큼 줄어요."] },
       rice:    { name: "왕겨", inline: "왕겨",
                  intro: "벼 알갱이를 감싸고 있던 껍질",
                  forms: ["밥", "떡", "쌀과자"],
                  story: [
                    "벼 낱알은 단단한 껍질에 싸여 자라요. 이 껍질이 왕겨예요.",
-                   "우리가 먹는 쌀을 얻으려면 도정 과정에서 이 껍질을 벗겨내야 해요. 왕겨는 먹을 수 없어서 쌀과 함께 팔리지 않고 부산물로 남아요.",
+                   "우리가 먹는 쌀을 얻으려면 도정 과정에서 이 껍질을 벗겨내야 해요. 왕겨는 먹을 수 없고 잘 팔리지도 않아서 부산물로 남아요.",
                    "우리는 이 왕겨를 플라스틱 원료에 섞어요. 남던 부산물이 원료가 되고, 석유계 플라스틱은 그만큼 줄어요."] },
       tapioca: { name: "타피오카", inline: "타피오카",
                  intro: "카사바 뿌리에서 얻는 전분",
@@ -284,7 +284,7 @@ window.LPL_TEXT = {
                  forms: ["빵", "라면·국수", "맥주"],
                  story: [
                    "부드러운 밀가루를 만들려면 밀 낱알을 갈면서 단단한 겉껍질을 따로 걸러내야 해요.",
-                   "이때 분리된 겉껍질이 밀기울이에요. 주인공은 밀가루라서 밀기울은 부산물로 남아요.",
+                   "이때 분리된 겉껍질이 밀기울이에요. 주인공은 밀가루이고 밀기울은 잘 팔리지 않아서 부산물로 남아요.",
                    "우리는 이 밀기울을 플라스틱 원료에 섞어요. 남던 부산물이 원료가 되고, 석유계 플라스틱은 그만큼 줄어요."] }
     }
   }
