@@ -134,6 +134,15 @@
       var ico = document.createElement("span"); ico.className = "ico"; ico.setAttribute("aria-hidden", "true");
       ico.textContent = (m.icons && m.icons[i]) || "";
       var cap = document.createElement("span"); cap.className = "cap"; cap.textContent = f;
+      if (CFG.formPhotos) {
+        /* 사진이 있으면 사진, 없거나 못 불러오면 이모지로 대체 */
+        var ph = document.createElement("img");
+        ph.className = "ph"; ph.alt = ""; ph.draggable = false;
+        ph.src = "assets/img/forms/" + m.id + "-" + (i + 1) + ".jpg";
+        ph.addEventListener("error", function () { d.classList.remove("has-photo"); ph.remove(); });
+        d.classList.add("has-photo");
+        d.appendChild(ph);
+      }
       d.appendChild(ico); d.appendChild(cap); formsEl.appendChild(d);
     });
     labels[1].textContent = u.nowLabel;

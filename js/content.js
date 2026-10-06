@@ -20,6 +20,11 @@ window.LPL_CONFIG = {
     ko: ""
   },
 
+  // "일상에서 만나는 모습" 타일에 사진을 쓸지 여부.
+  // true로 바꾸면 assets/img/forms/원료-번호.jpg (예: coffee-1.jpg ~ coffee-3.jpg)를 불러오고,
+  // 파일이 없는 칸은 자동으로 이모지가 나와요. 사진을 다 넣기 전에는 false로 두세요.
+  formPhotos: false,
+
   // 카드 순서와 사진 (사진을 바꾸려면 assets/img 안의 파일을 같은 이름으로 교체)
   materials: [
     // icons : "일상에서 만나는 모습" 타일의 그림(이모지). 언어와 상관없이 같이 쓰이고, 아래 forms 순서와 맞춰져요.
