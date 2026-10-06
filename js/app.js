@@ -116,7 +116,7 @@
     back.innerHTML =
       '<div class="chip"></div>' +
       '<p class="intro"></p>' +
-      '<div class="block"><div class="label"></div><div class="chips"></div><p class="origin"></p></div>' +
+      '<div class="block"><div class="label"></div><div class="forms"></div><p class="origin"></p></div>' +
       '<div class="block"><div class="label"></div>' +
         '<div class="bar" style="--p:' + p + '"><div class="l"></div><div class="r"></div></div>' +
         '<p class="nowline"></p><p class="sub reduce"></p></div>' +
@@ -128,9 +128,13 @@
     q(".origin").textContent = t.origin;
     var labels = back.querySelectorAll(".label");
     labels[0].textContent = u.formsLabel;
-    var chipsEl = q(".chips");
-    (t.forms || []).forEach(function (f) {
-      var s = document.createElement("span"); s.textContent = f; chipsEl.appendChild(s);
+    var formsEl = q(".forms");
+    (t.forms || []).forEach(function (f, i) {
+      var d = document.createElement("div");
+      var ico = document.createElement("span"); ico.className = "ico"; ico.setAttribute("aria-hidden", "true");
+      ico.textContent = (m.icons && m.icons[i]) || "";
+      var cap = document.createElement("span"); cap.className = "cap"; cap.textContent = f;
+      d.appendChild(ico); d.appendChild(cap); formsEl.appendChild(d);
     });
     labels[1].textContent = u.nowLabel;
     q(".bar .l").innerHTML = p + "%<small></small>";

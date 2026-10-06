@@ -22,11 +22,12 @@ window.LPL_CONFIG = {
 
   // 카드 순서와 사진 (사진을 바꾸려면 assets/img 안의 파일을 같은 이름으로 교체)
   materials: [
-    { id: "starch",  image: "assets/img/starch.jpg",  thumb: "assets/img/starch-thumb.jpg" },
-    { id: "coffee",  image: "assets/img/coffee.jpg",  thumb: "assets/img/coffee-thumb.jpg" },
-    { id: "rice",    image: "assets/img/rice.jpg",    thumb: "assets/img/rice-thumb.jpg" },
-    { id: "tapioca", image: "assets/img/tapioca.jpg", thumb: "assets/img/tapioca-thumb.jpg" },
-    { id: "wheat",   image: "assets/img/wheat.jpg",   thumb: "assets/img/wheat-thumb.jpg" }
+    // icons : "일상에서 만나는 모습" 타일의 그림(이모지). 언어와 상관없이 같이 쓰이고, 아래 forms 순서와 맞춰져요.
+    { id: "starch",  image: "assets/img/starch.jpg",  thumb: "assets/img/starch-thumb.jpg",  icons: ["🍜", "🍤", "🍮"] },
+    { id: "coffee",  image: "assets/img/coffee.jpg",  thumb: "assets/img/coffee-thumb.jpg",  icons: ["☕", "🥫", "🥄"] },
+    { id: "rice",    image: "assets/img/rice.jpg",    thumb: "assets/img/rice-thumb.jpg",    icons: ["🍚", "🍡", "🍘"] },
+    { id: "tapioca", image: "assets/img/tapioca.jpg", thumb: "assets/img/tapioca-thumb.jpg", icons: ["🧋", "🍪", "🥣"] },
+    { id: "wheat",   image: "assets/img/wheat.jpg",   thumb: "assets/img/wheat-thumb.jpg",   icons: ["🍞", "🍜", "🍺"] }
   ],
 
   // 뒷면의 "쓰일 수 있는 곳" 사진 줄 (모든 카드에 공통으로 나와요)
@@ -114,7 +115,7 @@ window.LPL_TEXT = {
                  origin: "規格に合わない作物は捨てられていました。" },
       coffee:  { name: "コーヒーかす", inline: "コーヒーかす",
                  intro: "コーヒーを淹れたあとに残るコーヒーかす。",
-                 forms: ["カフェのコーヒー", "缶・ボトルコーヒー", "インスタントコーヒー"],
+                 forms: ["カフェのコーヒー", "缶・ボトルコーヒー", "インスタント"],
                  origin: "残ったかすは、ごみとして捨てられていました。" },
       rice:    { name: "もみ殻", inline: "もみ殻",
                  intro: "米粒を包んでいたもみ殻。",
