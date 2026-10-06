@@ -13,7 +13,7 @@
   function $(id) { return document.getElementById(id); }
   var ring = $("ring"), hintEl = $("hint"), taglineEl = $("tagline"), langsEl = $("langs"), footEl = $("foot");
   var detail = $("detail"), flip = $("flip"), back = $("back");
-  var frontImg = $("frontImg"), frontName = $("frontName"), dotsEl = $("dots"), toast = $("toast");
+  var frontImg = $("frontImg"), frontName = $("frontName"), toast = $("toast");
 
   /* ---------- 배경 사진 부드럽게 나타나기 ---------- */
   Array.prototype.forEach.call(document.querySelectorAll(".bg img"), function (im) {
@@ -114,13 +114,16 @@
     frontImg.src = m.image; frontName.textContent = t.name;
     var href = surveyHref(m.id);
     back.innerHTML =
-      '<div class="chip"></div>' +
-      '<p class="intro"></p>' +
-      '<div class="block"><div class="label"></div><div class="forms"></div><p class="origin"></p></div>' +
-      '<div class="block"><div class="label"></div>' +
-        '<div class="bar" style="--p:' + p + '"><div class="l"></div><div class="r"></div></div>' +
-        '<p class="nowline"></p><p class="sub reduce"></p></div>' +
-      '<div class="block"><div class="label uselabel"></div><div class="uses"></div></div>' +
+      '<div class="col">' +
+        '<div class="chip"></div>' +
+        '<p class="intro"></p>' +
+        '<div class="block"><div class="label"></div><div class="forms"></div><p class="origin"></p></div>' +
+      '</div><div class="col">' +
+        '<div class="block"><div class="label"></div>' +
+          '<div class="bar" style="--p:' + p + '"><div class="l"></div><div class="r"></div></div>' +
+          '<p class="nowline"></p><p class="sub reduce"></p></div>' +
+        '<div class="block"><div class="label uselabel"></div><div class="uses"></div></div>' +
+      '</div>' +
       '<a class="cta" rel="noopener"><span class="txt"></span><span class="arrow" aria-hidden="true">&#8594;</span></a>';
     var q = function (sel) { return back.querySelector(sel); };
     q(".chip").textContent = t.name;
@@ -146,6 +149,7 @@
       d.appendChild(ico); d.appendChild(cap); formsEl.appendChild(d);
     });
     labels[1].textContent = u.nowLabel;
+    q(".bar .l").style.backgroundImage = "url('" + m.image + "')";
     q(".bar .l").innerHTML = p + "%<small></small>";
     q(".bar .l small").textContent = t.name;
     q(".bar .r").innerHTML = (100 - p) + "%<small></small>";
@@ -166,8 +170,6 @@
     q(".cta .txt").textContent = u.cta;
     if (href) { cta.href = href; cta.target = "_blank"; }
     else { cta.href = "#"; cta.addEventListener("click", function (e) { e.preventDefault(); showToast(u.ctaSoon); }); }
-    dotsEl.innerHTML = "";
-    for (var i = 0; i < N; i++) { var d = document.createElement("i"); if (i === idx) d.className = "on"; dotsEl.appendChild(d); }
     back.scrollTop = 0;
   }
 
@@ -188,23 +190,11 @@
     document.body.classList.remove("modal");
     setTimeout(function () { if (!detail.classList.contains("open")) detail.hidden = true; }, 260);
   }
-  function go(step) {
-    flip.classList.remove("flipped");
-    clearTimeout(openTimer);
-    openTimer = setTimeout(function () {
-      idx = (idx + step + N) % N; fillDetail();
-      requestAnimationFrame(function () { flip.classList.add("flipped"); });
-    }, reduce ? 0 : 360);
-  }
   $("close").addEventListener("click", closeDetail);
   $("backdrop").addEventListener("click", closeDetail);
-  $("prev").addEventListener("click", function () { go(-1); });
-  $("next").addEventListener("click", function () { go(1); });
   document.addEventListener("keydown", function (e) {
     if (detail.hidden) return;
     if (e.key === "Escape") closeDetail();
-    if (e.key === "ArrowLeft") go(-1);
-    if (e.key === "ArrowRight") go(1);
   });
   /* 카드 자체를 누르면 앞/뒤로 다시 뒤집기 (버튼·링크 제외) */
   flip.addEventListener("click", function (e) {
@@ -221,8 +211,6 @@
     footEl.textContent = u.event;
     orbs.forEach(function (b, i) { b.querySelector(".orb-name").textContent = mat(i).name; b.setAttribute("aria-label", mat(i).name); });
     $("close").setAttribute("aria-label", u.close);
-    $("prev").setAttribute("aria-label", u.prev);
-    $("next").setAttribute("aria-label", u.next);
     Array.prototype.forEach.call(langsEl.children, function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
   }
   LANGS.forEach(function (l) {
