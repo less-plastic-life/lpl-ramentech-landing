@@ -51,8 +51,8 @@ window.LPL_TEXT = {
     },
     materials: {
       starch:  { name: "Starch-based Crops", inline: "starch-based crops",
-                 intro: "Starch from plants such as potatoes, sweet potatoes and corn.",
-                 origin: "These crops end up on our tables, but those that fell short of market standards were thrown away." },
+                 intro: "Starch obtained from plants.",
+                 origin: "Crops are grown for our tables, but those that fell short of market standards were thrown away." },
       coffee:  { name: "Coffee Grounds", inline: "coffee grounds",
                  intro: "The leftover grounds after brewing coffee.",
                  origin: "We drink coffee every day, and the grounds left behind at cafés were thrown away." },
@@ -88,7 +88,7 @@ window.LPL_TEXT = {
     },
     materials: {
       starch:  { name: "デンプン系作物", inline: "デンプン系作物",
-                 intro: "じゃがいも・さつまいも・とうもろこしなど、植物から得られるデンプン。",
+                 intro: "植物から得られるデンプン。",
                  origin: "食卓に並ぶ作物でも、規格に合わないものは捨てられていました。" },
       coffee:  { name: "コーヒーかす", inline: "コーヒーかす",
                  intro: "コーヒーを淹れたあとに残るコーヒーかす。",
@@ -125,8 +125,8 @@ window.LPL_TEXT = {
     },
     materials: {
       starch:  { name: "淀粉类作物", inline: "淀粉类作物",
-                 intro: "从土豆、红薯、玉米等植物中提取的淀粉。",
-                 origin: "这些作物会出现在我们的餐桌上，但不符合规格的就被丢弃了。" },
+                 intro: "从植物中提取的淀粉。",
+                 origin: "农作物会出现在我们的餐桌上，但不符合规格的就被丢弃了。" },
       coffee:  { name: "咖啡渣", inline: "咖啡渣",
                  intro: "冲泡咖啡后剩下的咖啡渣。",
                  origin: "我们每天喝咖啡，咖啡店里剩下的咖啡渣曾被当作垃圾丢掉。" },
@@ -162,7 +162,7 @@ window.LPL_TEXT = {
     },
     materials: {
       starch:  { name: "전분", inline: "전분",
-                 intro: "감자·고구마·옥수수 같은 식물에서 얻는 전분",
+                 intro: "식물에서 얻는 전분",
                  origin: "식탁에 오르는 작물이지만, 기준에 못 미치는 것은 버려졌어요." },
       coffee:  { name: "커피박", inline: "커피박",
                  intro: "커피를 내리고 남은 원두 찌꺼기, 커피박",

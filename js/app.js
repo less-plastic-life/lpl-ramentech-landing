@@ -15,6 +15,13 @@
   var detail = $("detail"), flip = $("flip"), back = $("back");
   var frontImg = $("frontImg"), frontName = $("frontName"), dotsEl = $("dots"), toast = $("toast");
 
+  /* ---------- 배경 사진 부드럽게 나타나기 ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll(".bg img"), function (im) {
+    function show() { im.classList.add("in"); }
+    if (im.complete && im.naturalWidth) show();
+    else { im.addEventListener("load", show); im.addEventListener("error", function () {}); }
+  });
+
   /* ---------- 언어 ---------- */
   function pickLang() {
     var q = new URLSearchParams(location.search).get("lang");
