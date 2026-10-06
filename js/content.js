@@ -39,7 +39,7 @@ window.LPL_TEXT = {
       close: "Close",
       prev: "Previous",
       next: "Next",
-      originLabel: "Once discarded",
+      originLabel: "In everyday life",
       nowLabel: "In this sample",
       plasticLabel: "Plastic",
       nowLine: "This sample contains {pct}% {name}.",
@@ -52,19 +52,19 @@ window.LPL_TEXT = {
     materials: {
       starch:  { name: "Starch-based Crops", inline: "starch-based crops",
                  intro: "Starch from plants such as potatoes, sweet potatoes and corn.",
-                 origin: "Crops that fell short of market standards and would have been thrown away." },
+                 origin: "These crops end up on our tables, but those that fell short of market standards were thrown away." },
       coffee:  { name: "Coffee Grounds", inline: "coffee grounds",
                  intro: "The leftover grounds after brewing coffee.",
-                 origin: "Left over every day at cafés and treated as waste." },
+                 origin: "We drink coffee every day, and the grounds left behind at cafés were thrown away." },
       rice:    { name: "Rice Husk", inline: "rice husk",
                  intro: "The husk that wraps each grain of rice.",
-                 origin: "A by-product of rice milling that was hard to put to use." },
+                 origin: "Rice becomes our daily meals, and the husk left after milling is a by-product." },
       tapioca: { name: "Tapioca", inline: "tapioca starch",
                  intro: "Starch from cassava roots.",
-                 origin: "Cassava that fell short of market standards and would have been discarded." },
+                 origin: "Tapioca goes into drinks and desserts, but cassava that fell short of market standards was thrown away." },
       wheat:   { name: "Wheat Bran", inline: "wheat bran",
                  intro: "The outer layer removed when wheat is milled into flour.",
-                 origin: "A by-product left over after making flour." }
+                 origin: "Wheat becomes bread and noodles, and the outer layer left after milling is a by-product." }
     }
   },
 
@@ -76,7 +76,7 @@ window.LPL_TEXT = {
       close: "閉じる",
       prev: "前へ",
       next: "次へ",
-      originLabel: "かつては捨てられていたもの",
+      originLabel: "日常では",
       nowLabel: "このサンプルでは",
       plasticLabel: "プラスチック",
       nowLine: "このサンプルには{name}が{pct}%含まれています。",
@@ -89,19 +89,19 @@ window.LPL_TEXT = {
     materials: {
       starch:  { name: "デンプン系作物", inline: "デンプン系作物",
                  intro: "じゃがいも・さつまいも・とうもろこしなど、植物から得られるデンプン。",
-                 origin: "規格外で廃棄されるはずだった作物。" },
+                 origin: "食卓に並ぶ作物でも、規格に合わないものは捨てられていました。" },
       coffee:  { name: "コーヒーかす", inline: "コーヒーかす",
                  intro: "コーヒーを淹れたあとに残るコーヒーかす。",
-                 origin: "カフェで毎日出て、ごみとして捨てられていたもの。" },
+                 origin: "毎日飲まれるコーヒー。カフェで出たかすは、ごみとして捨てられていました。" },
       rice:    { name: "もみ殻", inline: "もみ殻",
                  intro: "米粒を包んでいたもみ殻。",
-                 origin: "精米の際に出る、使い道が見つかりにくかった副産物。" },
+                 origin: "ご飯になるお米。精米のあとに残るもみ殻は、副産物でした。" },
       tapioca: { name: "タピオカ", inline: "タピオカ（キャッサバ由来デンプン）",
                  intro: "キャッサバの根から得られるデンプン。",
-                 origin: "規格外で廃棄されるはずだったキャッサバ。" },
+                 origin: "ドリンクやスイーツに使われるタピオカ。規格に合わないキャッサバは捨てられていました。" },
       wheat:   { name: "小麦ふすま", inline: "小麦ふすま",
                  intro: "小麦を粉にするときに取り除かれる外皮、ふすま。",
-                 origin: "小麦粉を作ったあとに残る副産物。" }
+                 origin: "パンや麺になる小麦。製粉のあとに残る外皮は、副産物でした。" }
     }
   },
 
@@ -113,11 +113,11 @@ window.LPL_TEXT = {
       close: "关闭",
       prev: "上一张",
       next: "下一张",
-      originLabel: "曾经被丢弃",
+      originLabel: "在日常生活中",
       nowLabel: "在这个样品里",
       plasticLabel: "塑料",
       nowLine: "这个样品含有{pct}%的{name}。",
-      reduceLine: "有助于减少石油基塑料的使用。",
+      reduceLine: "有助于减少石油基塑料的用量。",
       adjustLine: "配比可以调整。",
       cta: "条件相同，您会选择环保产品吗？参与问卷",
       ctaSoon: "问卷链接即将开放",
@@ -126,19 +126,19 @@ window.LPL_TEXT = {
     materials: {
       starch:  { name: "淀粉类作物", inline: "淀粉类作物",
                  intro: "从土豆、红薯、玉米等植物中提取的淀粉。",
-                 origin: "因规格不达标而被丢弃的农作物。" },
+                 origin: "这些作物会出现在我们的餐桌上，但不符合规格的就被丢弃了。" },
       coffee:  { name: "咖啡渣", inline: "咖啡渣",
                  intro: "冲泡咖啡后剩下的咖啡渣。",
-                 origin: "每天在咖啡店产生、被当作垃圾丢弃的东西。" },
+                 origin: "我们每天喝咖啡，咖啡店里剩下的咖啡渣曾被当作垃圾丢掉。" },
       rice:    { name: "稻壳", inline: "稻壳",
                  intro: "包裹稻谷的外壳。",
-                 origin: "碾米时产生、难以找到用途的副产物。" },
+                 origin: "稻米变成日常的饭食，碾米后留下的稻壳是副产物。" },
       tapioca: { name: "木薯淀粉", inline: "木薯淀粉",
                  intro: "从木薯根中提取的淀粉。",
-                 origin: "因规格不达标而被丢弃的木薯。" },
+                 origin: "木薯淀粉常用于饮品和甜点，而不符合规格的木薯曾被丢弃。" },
       wheat:   { name: "麦麸", inline: "麦麸",
                  intro: "小麦磨成面粉时分离出来的外皮。",
-                 origin: "制作面粉后剩下的副产物。" }
+                 origin: "小麦变成面包和面条，磨粉后剩下的外皮是副产物。" }
     }
   },
 
@@ -150,7 +150,7 @@ window.LPL_TEXT = {
       close: "닫기",
       prev: "이전",
       next: "다음",
-      originLabel: "원래는 버려지던",
+      originLabel: "일상 속에서는",
       nowLabel: "이 샘플에는",
       plasticLabel: "플라스틱",
       nowLine: "이 샘플에는 {name} {pct}%가 들어 있어요.",
@@ -163,19 +163,19 @@ window.LPL_TEXT = {
     materials: {
       starch:  { name: "전분", inline: "전분",
                  intro: "감자·고구마·옥수수 같은 식물에서 얻는 전분",
-                 origin: "상품성이 떨어져 버려지던 작물" },
+                 origin: "식탁에 오르는 작물이지만, 기준에 못 미치는 것은 버려졌어요." },
       coffee:  { name: "커피박", inline: "커피박",
                  intro: "커피를 내리고 남은 원두 찌꺼기, 커피박",
-                 origin: "카페에서 매일 쓰레기로 나오던 것" },
+                 origin: "매일 마시는 커피, 카페에서 나온 찌꺼기는 쓰레기로 버려졌어요." },
       rice:    { name: "왕겨", inline: "왕겨",
                  intro: "벼 알갱이를 감싸고 있던 껍질",
-                 origin: "쌀을 만들고 남아 쓰임새를 찾기 어려웠던 부산물" },
+                 origin: "밥이 되는 쌀, 도정하고 남은 껍질은 부산물로 남았어요." },
       tapioca: { name: "타피오카", inline: "타피오카",
                  intro: "카사바 뿌리에서 얻는 전분",
-                 origin: "상품성이 떨어져 버려지던 카사바" },
+                 origin: "음료와 디저트에 쓰이는 타피오카, 기준에 못 미치는 카사바는 버려졌어요." },
       wheat:   { name: "밀기울", inline: "밀기울",
                  intro: "밀을 가루로 만들 때 분리되는 겉껍질, 밀기울",
-                 origin: "밀가루가 되고 남은 부산물" }
+                 origin: "빵과 면이 되는 밀, 제분하고 남은 겉껍질은 부산물이에요." }
     }
   }
 };
