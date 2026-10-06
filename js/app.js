@@ -117,8 +117,8 @@
       '<div class="col">' +
         '<div class="chip"></div>' +
         '<p class="intro"></p>' +
-        '<div class="block"><div class="label"></div><div class="forms"></div><p class="origin"></p></div>' +
-      '</div><div class="col">' +
+        '<div class="block"><div class="label"></div><div class="forms"></div></div>' +
+      '</div><div class="col"><ol class="story"></ol></div><div class="col wide">' +
         '<div class="block"><div class="label"></div>' +
           '<div class="bar" style="--p:' + p + '"><div class="l"></div><div class="r"></div></div>' +
           '<p class="nowline"></p><p class="sub reduce"></p></div>' +
@@ -128,7 +128,13 @@
     var q = function (sel) { return back.querySelector(sel); };
     q(".chip").textContent = t.name;
     q(".intro").textContent = t.intro;
-    q(".origin").textContent = t.origin;
+    var storyEl = q(".story");
+    (t.story || []).forEach(function (s, i) {
+      var li = document.createElement("li");
+      var h = document.createElement("b"); h.textContent = (u.storyLabels || [])[i] || "";
+      var p = document.createElement("span"); p.textContent = s;
+      li.appendChild(h); li.appendChild(p); storyEl.appendChild(li);
+    });
     var labels = back.querySelectorAll(".label");
     labels[0].textContent = u.formsLabel;
     var formsEl = q(".forms");
