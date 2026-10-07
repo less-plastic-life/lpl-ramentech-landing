@@ -67,12 +67,21 @@
   window.addEventListener("pointerup", endDrag);
   window.addEventListener("pointercancel", endDrag);
 
+  var trackEl = ring.querySelector(".track"), lastKey = "";
   function layout() {
-    var s = ring.clientWidth, cs = s * 0.28, R = s * 0.355;
+    var w = ring.clientWidth, h = ring.clientHeight;
+    var cs = Math.min(w, h) * 0.28;
+    var ry = (h - cs) / 2 - h * 0.01;
+    var rx = Math.min((w - cs) / 2 - w * 0.01, ry * 2.1); /* 넓은 화면에서는 타원 궤도 */
+    var key = w + "x" + h;
+    if (key !== lastKey) {
+      lastKey = key;
+      trackEl.style.cssText = "left:" + (w / 2 - rx) + "px;top:" + (h / 2 - ry) + "px;width:" + (rx * 2) + "px;height:" + (ry * 2) + "px";
+    }
     for (var i = 0; i < N; i++) {
       var a = (rot + i * 360 / N - 90) * Math.PI / 180;
-      var x = s / 2 + R * Math.cos(a) - cs / 2;
-      var y = s / 2 + R * Math.sin(a) - cs / 2;
+      var x = w / 2 + rx * Math.cos(a) - cs / 2;
+      var y = h / 2 + ry * Math.sin(a) - cs / 2;
       var el = orbs[i];
       el.style.width = cs + "px"; el.style.height = cs + "px";
       el.style.transform = "translate(" + x.toFixed(1) + "px," + y.toFixed(1) + "px)";

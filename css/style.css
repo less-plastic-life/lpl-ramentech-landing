@@ -241,7 +241,9 @@ html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
   .app { padding: 24px 40px; }
   .tagline { font-size: 14px; }
   .langs button { font-size: 13px; padding: 7px 14px; }
-  .ring { width: min(90vw, 720px, calc(100svh - 170px)); }
+  .app { padding: 18px 40px 14px; }
+  .ring { width: min(94vw, 1180px); height: calc(100svh - 118px); max-height: 820px; aspect-ratio: auto; }
+  .logo { width: min(36%, calc((100svh - 118px) * .52)); height: auto; }
   .orb { border-radius: 18px; }
   .orb-name { font-size: 14px; padding: 22px 4px 8px; }
   .hint { font-size: 15px; }
